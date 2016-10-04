@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    app: "./src/app.tsx"
+    app: "./src/app.js"
   },
   
   output: {
@@ -10,16 +10,12 @@ module.exports = {
     filename: "[name].js",
   },
   
-  resolve: {
-    extensions: ["", ".ts", ".tsx", ".js", ".jsx"],
-  },
-  
   module: {
     loaders: [
       {
-        test: /\.tsx?$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: "babel!ts",
+        loader: "babel",
       },
     ],
   },
